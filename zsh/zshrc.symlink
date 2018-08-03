@@ -1,0 +1,56 @@
+# shortcut to this dotfiles path is $ZSH
+export ZSH=$HOME/.dotfiles
+
+# Stash your environment variables in ~/.localrc. This means they'll stay out
+# of your main dotfiles repository (which may be public, like this one), but
+# you'll have access to them in your scripts.
+if [[ -a ~/.localrc ]]
+then
+  source ~/.localrc
+fi
+
+# all of our zsh files
+typeset -U config_files
+config_files=($ZSH/**/*.zsh)
+
+# load the path files
+for file in ${(M)config_files:#*/path.zsh}
+do
+  source $file
+done
+
+# Path to your oh-my-zsh installation.
+export ZSH=/Users/loreina/.oh-my-zsh
+
+ZSH_THEME="agnoster"
+
+plugins=(
+  git
+  zsh-syntax-highlighting
+  zsh-autosuggestions
+  autojump
+)
+
+source $ZSH/oh-my-zsh.sh
+
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
+# clean prompt
+prompt_context() {}
+
+# hide user and host name
+DISABLE_AUTO_TITLE="true"
+
+precmd() {
+  # sets the tab title to current dir
+  echo -ne "\e]1;${PWD##*/}\a"
+}
+
+# npm pure-prompt
+autoload -U promptinit; promptinit
+prompt pure
+
+# clear screen
+alias cls='clear'
+
+alias reload!='. ~/.zshrc'
