@@ -41,3 +41,4 @@ cask 'spotify'
 cask 'ticktick'
 cask 'tower'
 cask 'visual-studio-code'
+
