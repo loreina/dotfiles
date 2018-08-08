@@ -1,7 +1,7 @@
 cask_args appdir: '/Applications'
 
 tap 'homebrew/bundle'
-tap 'puma/puma'
+tap 'homebrew/cask-fonts'
 
 # Tools
 brew 'ack'
@@ -9,18 +9,19 @@ brew 'autojump'
 brew 'coreutils'
 brew 'curl'
 brew 'git'
+brew 'hub'
 brew 'node'
 brew 'nvm'
 brew 'openssl'
-brew 'puma/puma/puma-dev'
 brew 'python'
 brew 'python3'
 brew 'readline'
 brew 'tree'
 brew 'unrar'
 brew 'wget'
-brew 'yarn'
 brew 'xz'
+brew 'yarn'
+brew 'youtube-dl'
 brew 'zsh'
 
 # Casks
@@ -42,3 +43,8 @@ cask 'ticktick'
 cask 'tower'
 cask 'visual-studio-code'
 
+# Fonts
+cask 'font-hind'
+cask 'font-lato'
+cask 'font-menlo-for-powerline'
+cask 'font-source-sans-pro'
