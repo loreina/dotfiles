@@ -1,7 +1,3 @@
-// Future versions of Hyper may add additional config options,
-// which will not automatically be merged into this file.
-// See https://hyper.is#cfg for all currently supported options.
-
 module.exports = {
   config: {
     // choose either `'stable'` for receiving highly polished,
@@ -12,7 +8,7 @@ module.exports = {
     fontSize: 11,
 
     // font family with optional fallbacks
-    fontFamily: '"Menlo for Powerline", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+    fontFamily: '"Menlo for Powerline", "Inconsolata for Powerline", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',
@@ -131,11 +127,12 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ["hyperpower", "hyper-search", "hyper-one-light",],
+  plugins: ["hyperpower", "hyper-search", 'hyper-one-light',],
 
   // other themes
     // "hyper-snazzy",
     // "hyper-papercolor",
+    // "hyper-one-light",
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here

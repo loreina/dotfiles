@@ -1,13 +1,3 @@
-# Common ignored files
-.git
-CVS
-.svn
-.hg
-.lock-wscript
-.wafpickle-N
-*.swp
 .DS_Store
-._*
-npm-debug.log
-*.un~
-.sass-cache
+*~
+*.swp
