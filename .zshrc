@@ -36,6 +36,3 @@ PURE_PROMPT_SYMBOL="➜"
 
 # PS1
 # export PS1="▷ "
-
-# set editor
-export EDITOR='code'
